@@ -13,6 +13,13 @@ local Tab7 = GUI:Tap("Credits")
 Tab1:Button("Staff Detector",function()
     print("uhhh")
 end)
+end)
+Tab1:Button("Staff Detector V2",function()
+    print("Coming soon")
+end)
+Tab1:Button("Anti Knockback",function()
+    print("uhhh")
+end)
 Tab1:Button("Fake Death (USE NO NAMETAG)",function()
     game:GetService('RunService').Heartbeat:connect(function()
     Humanoid.PlatformStand = true
@@ -39,13 +46,6 @@ Tab1:Button("Fake Death (USE NO NAMETAG)",function()
             Iteration = Iteration+1
         end
     end
-end)
-end)
-Tab1:Button("Staff Detector V2",function()
-    print("Coming soon")
-end)
-Tab1:Button("Anti Knockback",function()
-    print("uhhh")
 end)
 Tab2:Button("Infinite Jump",function()
     		local InfiniteJumpEnabled = true
