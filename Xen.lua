@@ -86,7 +86,19 @@ Tab2:Button("Yellow Soda Exploit",function()
     print("uhhh")
 end)
 Tab2:Button("Anti Void",function()
-    print("uhhh")
+    local specialpos = (workspace.MapCFrames:FindFirstChild("center") and workspace.MapCFrames.center.Value.p == Vector3.new(77, 11, 35))
+        AntiVoidP = Instance.new("Part")
+        AntiVoidP.Parent = Workspace
+        AntiVoidP.Name = "AntiVoid"
+        AntiVoidP.CanCollide = true
+        AntiVoidP.Size = Vector3.new(2048, 1, 2048)
+        AntiVoidP.Anchored = true
+        AntiVoidP.Transparency = 0.40
+        AntiVoidP.Material = Enum.Material.Neon
+        AntiVoidP.Color = Color3.fromRGB(128, 0, 128)
+        AntiVoidP.Position = Vector3.new(0, 30.5, 0)
+    print("...")
+end)
 end)
 Tab3:Button("Chat Spammer",function()
     print("uhhh")
