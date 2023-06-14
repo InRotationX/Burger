@@ -37,7 +37,47 @@ Tab2:Button("Kill Aura",function()
     print("uhhh")
 end)
 Tab2:Button("Bed Nuker",function()
-    local ag=RaycastParams.new()ag.IgnoreWater=true;function NukerFunction(ah)local ai=game:GetService("Workspace"):Raycast(ah.Position+Vector3.new(0,24,0),Vector3.new(0,-27,0),ag)if ai then local aj=ai.Instance;for p,q in pairs(aj:GetChildren())do if q:IsA("Texture")then q:Destroy()end end;aj.Color=Color3.fromRGB(102,0,255)aj.Material=Enum.Material.Neon;game:GetService("ReplicatedStorage").rbxts_include.node_modules:FindFirstChild("@rbxts").net.out._NetManaged.DamageBlock:InvokeServer({["blockRef"]={["blockPosition"]=Vector3.new(math.round(aj.Position.X/3),math.round(aj.Position.Y/3),math.round(aj.Position.Z/3))},["hitPosition"]=Vector3.new(math.round(aj.Position.X/3),math.round(aj.Position.Y/3),math.round(aj.Position.Z/3)),["hitNormal"]=Vector3.new(math.round(aj.Position.X/3),math.round(aj.Position.Y/3),math.round(aj.Position.Z/3))})end end;local aa={["Value"]=30}local ak=t;if ak then spawn(function()while task.wait(0.1)do if not ak then return end;spawn(function()if h:GetAttribute("DenyBlockBreak")==true then h:SetAttribute("DenyBlockBreak",nil)end end)if isAlive(h)then local u=getbeds()for p,q in pairs(u)do local D=(q.Position-h.Character.PrimaryPart.Position).Magnitude;if D<aa["Value"]then NukerFunction(q)end end end end end)end end)
+ local ag = RaycastParams.new();
+	ag.IgnoreWater = true;
+	function NukerFunction(ah)
+		local ai = game:GetService("Workspace"):Raycast(ah.Position + Vector3.new(0, 24, 0), Vector3.new(0, -27, 0), ag);
+		if ai then
+			local aj = ai.Instance;
+			for p, q in pairs(aj:GetChildren()) do
+				if q:IsA("Texture") then
+					q:Destroy();
+				end
+			end
+			aj.Color = Color3.fromRGB(102, 0, 255);
+			aj.Material = Enum.Material.Neon;
+			game:GetService("ReplicatedStorage").rbxts_include.node_modules:FindFirstChild("@rbxts").net.out._NetManaged.DamageBlock:InvokeServer({blockRef={blockPosition=Vector3.new(math.round(aj.Position.X / 3), math.round(aj.Position.Y / 3), math.round(aj.Position.Z / 3))},hitPosition=Vector3.new(math.round(aj.Position.X / 3), math.round(aj.Position.Y / 3), math.round(aj.Position.Z / 3)),hitNormal=Vector3.new(math.round(aj.Position.X / 3), math.round(aj.Position.Y / 3), math.round(aj.Position.Z / 3))});
+		end
+	end
+	local aa = {Value=30};
+	local ak = t;
+	if ak then
+		spawn(function()
+			while task.wait(0.1) do
+				if not ak then
+					return;
+				end
+				spawn(function()
+					if (h:GetAttribute("DenyBlockBreak") == true) then
+						h:SetAttribute("DenyBlockBreak", nil);
+					end
+				end);
+				if isAlive(h) then
+					local u = getbeds();
+					for p, q in pairs(u) do
+						local D = (q.Position - h.Character.PrimaryPart.Position).Magnitude;
+						if (D < aa.Value) then
+							NukerFunction(q);
+						end
+					end
+				end
+			end
+		end);
+	end
 end)
 Tab2:Button("Fly (F TO TOGGLE)",function()
  print("e")
