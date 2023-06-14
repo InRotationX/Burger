@@ -39,6 +39,21 @@ end)
 Tab2:Button("Bed Nuker",function()
     print("uhhh")
 end)
+Tab2:Button("Fly (F TO TOGGLE)",function()
+    	Workspace.Gravity = 0
+		lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame + Vector3.new(0, -3, 0)
+		spawn(function()
+					repeat
+		if (not betterjump) then return end
+		Workspace.Gravity = 0
+		lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame + Vector3.new(0, 5, 0)
+		task.wait(0.08)
+		lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0)
+		until (not betterjump) 
+			end)	
+		else
+		Workspace.Gravity = 196.2)
+end)
 Tab2:Button("Yellow Soda Exploit",function()
     print("uhhh")
 end)
