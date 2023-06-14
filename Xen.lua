@@ -37,13 +37,7 @@ Tab2:Button("Kill Aura",function()
     print("uhhh")
 end)
 Tab2:Button("Bed Nuker",function()
-    print("uhhh")
-end)
-Tab2:Button("Yellow Soda Exploit",function()
-    print("uhhh")
-end)
-Tab2:Button("Anti Void",function()
-    local lplr = game.Players.LocalPlayer
+    	local lplr = game.Players.LocalPlayer
 	local cam = game:GetService("Workspace").CurrentCamera
 	local uis = game:GetService("UserInputService")
 	local KnitClient = debug.getupvalue(require(lplr.PlayerScripts.TS.knit).setup, 6)
@@ -173,7 +167,17 @@ Tab2:Button("Anti Void",function()
 								},
 								["hitPosition"] = getserverpos(v.Position),
 								["hitNormal"] = getserverpos(v.Position)
-
+							})
+						end
+					end
+				end
+	
+end)
+Tab2:Button("Yellow Soda Exploit",function()
+    print("uhhh")
+end)
+Tab2:Button("Anti Void",function() 
+    print("e")
 end)
 Tab3:Button("Chat Spammer",function()
     print("uhhh")
