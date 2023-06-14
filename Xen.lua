@@ -13,6 +13,34 @@ local Tab7 = GUI:Tap("Credits")
 Tab1:Button("Staff Detector",function()
     print("uhhh")
 end)
+Tab1:Button("Fake Death (USE NO NAMETAG)",function()
+    game:GetService('RunService').Heartbeat:connect(function()
+    Humanoid.PlatformStand = true
+    if Character.Parent.Name ~= 'Workspace' then
+        if Invincible == true then
+            Character.Parent = game.Workspace
+            Humanoid.Health = 0
+        end
+    end
+    if Invincible == true then
+        Humanoid.MaxHealth = math.huge
+        Humanoid.Health = math.huge
+    end
+    if RotateToMouse == true then
+        if Player:GetMouse().Hit~=nil then
+            Character.Torso.CFrame = CFrame.new(Character.Torso.Position, Player:GetMouse().Hit.p)
+        end
+    end
+    if RandomRotate == true then
+        if Iteration <= 10 then
+            Iteration = 0
+            Character.Torso.CFrame = Character.Torso.CFrame*CFrame.Angles(math.rad(math.random(1,360)),math.rad(math.random(1,360)),math.rad(math.random(1,360)))
+        else
+            Iteration = Iteration+1
+        end
+    end
+end)
+end)
 Tab1:Button("Staff Detector V2",function()
     print("Coming soon")
 end)
