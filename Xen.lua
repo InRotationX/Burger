@@ -1,10 +1,3 @@
-wait(1.2)
-game.StarterGui:SetCore("SendNotification", {
-Title = "Xen Client"; -- the title (ofc)
-Text = "Current Version V1.0"; -- what the text says (ofc)
-Icon = "rbxassetid://57254792"; -- the image if u want. 
-Duration = 5; -- how long the notification should in secounds
-})
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/InRotationX/Burger/main/burger%20whopper.lua"))()
 
 local GUI = library:new("Xen Client","Version V1.0")
