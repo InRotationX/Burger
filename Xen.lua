@@ -47,6 +47,7 @@ Tab1:Button("Fake Death (USE NO NAMETAG)",function()
         end
     end
 end)
+end)
 Tab2:Button("Infinite Jump",function()
     		local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
