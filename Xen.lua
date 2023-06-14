@@ -39,7 +39,7 @@ end)
 Tab2:Button("Bed Nuker",function()
  local ag = RaycastParams.new();
 	ag.IgnoreWater = true;
-	function NukerFunction(ah)
+	
 		local ai = game:GetService("Workspace"):Raycast(ah.Position + Vector3.new(0, 24, 0), Vector3.new(0, -27, 0), ag);
 		if ai then
 			local aj = ai.Instance;
