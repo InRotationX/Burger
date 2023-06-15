@@ -1,9 +1,9 @@
 wait(1.2)
 game.StarterGui:SetCore("SendNotification", {
-Title = "Xen Client"; -- the title (ofc)
-Text = "Current Version V1.0"; -- what the text says (ofc)
-Icon = "rbxassetid://57254792"; -- the image if u want. 
-Duration = 5; -- how long the notification should in secounds
+Title = "Xen Client"; 
+Text = "Current Version V1.0"; 
+Icon = "rbxassetid://57254792"; 
+Duration = 5; 
 })
 if game.CoreGui:FindFirstChild("UICopied") then
     game.CoreGui:FindFirstChild("UICopied"):Destroy()
@@ -11,7 +11,7 @@ end
 
 function dragify(Frame)
 dragToggle = nil
-dragSpeed = .25 -- You can edit this.
+dragSpeed = .30
 dragInput = nil
 dragStart = nil
 dragPos = nil
@@ -72,7 +72,7 @@ UICopied.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Background.Name = "Background"
 Background.Parent = UICopied
-Background.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Background.BackgroundColor3 = Color3.fromRG)
 Background.Position = UDim2.new(0, 676, 0, 266)
 Background.Size = UDim2.new(0, 567, 0, 310)
 local toggledui = false
